@@ -24,7 +24,7 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="top" title="Photini v1.0 documentation" href="../index.html" />
     <link rel="next" title="User Manual" href="../manual/manual.html" />
-    <link rel="prev" title="Welcome to Photini’s documentation!" href="../index.html" /> 
+    <link rel="prev" title="Photini documentation" href="../index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -37,7 +37,7 @@
           <a href="../manual/manual.html" title="User Manual"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="../index.html" title="Welcome to Photini’s documentation!"
+          <a href="../index.html" title="Photini documentation"
              accesskey="P">previous</a> |</li>
         <li><a href="../index.html">Photini v1.0 documentation</a> &raquo;</li> 
       </ul>
@@ -54,6 +54,56 @@
 &#8220;Metadata&#8221; is said to mean &#8220;data about data&#8221;.
 In the context of digital photographs this means information that isn&#8217;t essential in order to display the image, but tells you something about it.
 For example a title and description of the scene or the date &amp; time and the GPS coördinates of the camera&#8217;s position when the picture was taken.</p>
+<div class="section" id="getting-photini">
+<h2>Getting Photini<a class="headerlink" href="#getting-photini" title="Permalink to this headline">¶</a></h2>
+<p>You can download the latest version of Photini from <a class="reference external" href="https://github.com/jim-easterbrook/Photini">Github</a>.
+If you have git installed on your computer, and are familiar with its use, then the best way to download it will be to clone the repository.
+This will make it easier to update your copy when new features are added or bugs are fixed.</p>
+<p>If you prefer to download a single archive file, go to the <a class="reference external" href="https://github.com/jim-easterbrook/Photini/downloads">Github download page</a> and click on &#8220;Download as zip&#8221; or &#8220;Download as tar.gz&#8221;.
+Save the file on your computer, then extract all the files in it in the usual way.</p>
+<p>The next task is to install the various dependencies.</p>
+<div class="section" id="dependencies-linux">
+<h3>Dependencies (Linux)<a class="headerlink" href="#dependencies-linux" title="Permalink to this headline">¶</a></h3>
+<p>Many Linux installations will already have <a class="reference external" href="http://python.org/">Python</a> installed, but if not you should be able to get it easily from the standard repository.
+This should also be the case for <a class="reference external" href="http://www.riverbankcomputing.co.uk/software/pyqt/intro">PyQt</a>.
+<a class="reference external" href="http://tilloy.net/dev/pyexiv2/overview.html">pyexiv2</a> may be in the repository.
+If not, you should be able to download it from the <a class="reference external" href="http://tilloy.net/dev/pyexiv2/download.html">pyexiv2 download page</a>.
+As a last resort, you may need to compile and install it yourself, following <a class="reference external" href="http://tilloy.net/dev/pyexiv2/developers.html#building-and-installing">these instructions</a>.</p>
+</div>
+<div class="section" id="dependencies-windows">
+<h3>Dependencies (Windows)<a class="headerlink" href="#dependencies-windows" title="Permalink to this headline">¶</a></h3>
+<p>Windows users will probably need to install <a class="reference external" href="http://python.org/">Python</a> and <a class="reference external" href="http://www.riverbankcomputing.co.uk/software/pyqt/intro">PyQt</a> themselves.
+Installers are available from the <a class="reference external" href="http://www.python.org/download/">Python download page</a> and the <a class="reference external" href="http://www.riverbankcomputing.co.uk/software/pyqt/download">PyQt4 download page</a>.
+Make sure you get Python version 2.7 and the corresponding PyQt installer.
+Windows installers for <a class="reference external" href="http://tilloy.net/dev/pyexiv2/overview.html">pyexiv2</a> are available from the <a class="reference external" href="http://tilloy.net/dev/pyexiv2/download.html">pyexiv2 download page</a>.
+Again, make sure you get the installer for Python 2.7 and the latest version of pyexiv2.</p>
+</div>
+</div>
+<div class="section" id="installing-photini">
+<h2>Installing Photini<a class="headerlink" href="#installing-photini" title="Permalink to this headline">¶</a></h2>
+<p>Having installed all the dependencies it&#8217;s a good idea to test Photini.
+Open a terminal command window and navigate to the directory you downloaded it to, then navigate to the <tt class="docutils literal"><span class="pre">code</span></tt> subdirectory.
+You should then be able to run the Photini editor with one of the following commands.</p>
+<p>Linux:</p>
+<div class="highlight-python"><pre>python photini/editor.py</pre>
+</div>
+<p>Windows:</p>
+<div class="highlight-python"><pre>c:\python27\python.exe photini\editor.py</pre>
+</div>
+<p>This should launch the GUI and you should then be able to switch to the &#8220;map&#8221; tab and load a Google map.</p>
+<p>Whilst it is perfectly possible to use Photini from its download directory, it is more convenient to install it in your Python&#8217;s &#8220;site-packages&#8221; and &#8220;scripts&#8221; directories.
+This is fully automated by the setup.py script.</p>
+<p>Linux:</p>
+<div class="highlight-python"><pre>python setup.py build
+sudo python setup.py install</pre>
+</div>
+<p>Windows:</p>
+<div class="highlight-python"><pre>c:\python27\python.exe setup.py build
+c:\python27\python.exe setup.py install</pre>
+</div>
+<p>After doing this the Photini editor can be launched from any command window with a simple <tt class="docutils literal"><span class="pre">photini</span></tt> command.
+Windows users can also put a link to <tt class="docutils literal"><span class="pre">c:\python27\scripts\photini.bat</span></tt> on their desktop.</p>
+</div>
 </div>
 
 
@@ -62,9 +112,22 @@ For example a title and description of the scene or the date &amp; time and the 
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Introduction</a><ul>
+<li><a class="reference internal" href="#getting-photini">Getting Photini</a><ul>
+<li><a class="reference internal" href="#dependencies-linux">Dependencies (Linux)</a></li>
+<li><a class="reference internal" href="#dependencies-windows">Dependencies (Windows)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#installing-photini">Installing Photini</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>Previous topic</h4>
   <p class="topless"><a href="../index.html"
-                        title="previous chapter">Welcome to Photini&#8217;s documentation!</a></p>
+                        title="previous chapter">Photini documentation</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="../manual/manual.html"
                         title="next chapter">User Manual</a></p>
@@ -100,7 +163,7 @@ For example a title and description of the scene or the date &amp; time and the 
           <a href="../manual/manual.html" title="User Manual"
              >next</a> |</li>
         <li class="right" >
-          <a href="../index.html" title="Welcome to Photini’s documentation!"
+          <a href="../index.html" title="Photini documentation"
              >previous</a> |</li>
         <li><a href="../index.html">Photini v1.0 documentation</a> &raquo;</li> 
       </ul>
