@@ -1,0 +1,6 @@
+# Editor backups
+*~
+
+# Sphinx build side effects
+doc/html/.buildinfo
+doc/doctrees
