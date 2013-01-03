@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>User Manual - Map &mdash; Photini 13.01_43a0943 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '13.01_43a0943',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Photini 13.01_43a0943 documentation" href="../index.html" />
+    <link rel="next" title="User Manual - Flickr uploader" href="flickr.html" />
+    <link rel="prev" title="User Manual - Technical metadata" href="technical_metadata.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="flickr.html" title="User Manual - Flickr uploader"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="technical_metadata.html" title="User Manual - Technical metadata"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Photini 13.01_43a0943 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="user-manual-map">
+<h1>User Manual - Map<a class="headerlink" href="#user-manual-map" title="Permalink to this headline">¶</a></h1>
+<p>The <tt class="docutils literal"><span class="pre">Map</span> <span class="pre">(Google)</span></tt> (keyboard shortcut <tt class="docutils literal"><span class="pre">Alt+G</span></tt>), <tt class="docutils literal"><span class="pre">Map</span> <span class="pre">(Bing)</span></tt> (keyboard shortcut <tt class="docutils literal"><span class="pre">Alt+B</span></tt>) &amp; <tt class="docutils literal"><span class="pre">Map</span> <span class="pre">(OSM)</span></tt> (keyboard shortcut <tt class="docutils literal"><span class="pre">Alt+O</span></tt>) tabs allow you to set geolocation data (latitude &amp; longitude) where a photograph was taken.
+(Some people argue that it should be the position of the subject of the photograph, but what about photographs of the Moon?)
+All three tabs have similar functionality, but use different providers of map data and imagery.</p>
+<img alt="../_images/screenshot_13.png" src="../_images/screenshot_13.png" />
+<p>When you first select one of the map tabs you need to click the <tt class="docutils literal"><span class="pre">Load</span> <span class="pre">map</span></tt> button.
+This helps reduce the load on the map providers&#8217; servers by not having them contacted every time you run Photini.</p>
+<img alt="../_images/screenshot_14.png" src="../_images/screenshot_14.png" />
+<p>Once the map is loaded, the <tt class="docutils literal"><span class="pre">Load</span> <span class="pre">map</span></tt> button is replaced by legal notices and a button (or buttons) to display the terms of use in your web browser.</p>
+<p>The map initially displays the previously used location.
+You can change the view by zooming in or out or by panning the map with the pan control or by dragging it with the mouse.
+However, it&#8217;s usually easier to find a specific location by using the search facility.</p>
+<img alt="../_images/screenshot_15.png" src="../_images/screenshot_15.png" />
+<p>Click on the <tt class="docutils literal"><span class="pre">&lt;new</span> <span class="pre">search&gt;</span></tt> edit box and type in a search term such as the name of a town, then press the &#8216;return&#8217; key.
+A drop down list of place names should appear, from which you can select one.
+Note that the search is influenced by the current location shown on the map.
+A search for &#8216;newport&#8217; will return different results if the map is showing New York than if it&#8217;s showing London.
+Sometimes you may need to drag the map to somewhere near where you want to be and then click on the <tt class="docutils literal"><span class="pre">&lt;repeat</span> <span class="pre">search&gt;</span></tt> item in the drop down list.</p>
+<img alt="../_images/screenshot_16.png" src="../_images/screenshot_16.png" />
+<p>Having found the right town, you can then zoom in and pan around to find the exact location where your photograph was taken.
+Using aerial / satellite imagery (if it&#8217;s available) can help with this.</p>
+<img alt="../_images/screenshot_17.png" src="../_images/screenshot_17.png" />
+<p>Now you can drag and drop your photograph onto the map to set its location.
+To drag multiple images to the same location, select them all and then drag with the &#8216;control&#8217; or &#8216;shift&#8217; key held down.</p>
+<img alt="../_images/screenshot_18.png" src="../_images/screenshot_18.png" />
+<p>Note that photographs that have location data are shown with a flag symbol (⚐) in the image selector area.</p>
+<p>The location coordinates are shown in the <tt class="docutils literal"><span class="pre">Latitude,</span> <span class="pre">longitude:</span></tt> box.
+These values are editable, so you can set the location of a photograph directly, e.g. by copying and pasting from another one.</p>
+<img alt="../_images/screenshot_19.png" src="../_images/screenshot_19.png" />
+<p>When several photographs have location metadata Photini will pan the map (and zoom out if required) to ensure all the selected images are shown on the map.
+Selected images are shown with coloured markers.
+Unselected images are shown with grey markers.</p>
+<img alt="../_images/screenshot_20.png" src="../_images/screenshot_20.png" />
+<p>Selecting another map tab, and loading the map, will show the same location but with data from a different provider.</p>
+<img alt="../_images/screenshot_21.png" src="../_images/screenshot_21.png" />
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="technical_metadata.html"
+                        title="previous chapter">User Manual - Technical metadata</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="flickr.html"
+                        title="next chapter">User Manual - Flickr uploader</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/manual/map.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="flickr.html" title="User Manual - Flickr uploader"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="technical_metadata.html" title="User Manual - Technical metadata"
+             >previous</a> |</li>
+        <li><a href="../index.html">Photini 13.01_43a0943 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012-13, Jim Easterbrook.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
