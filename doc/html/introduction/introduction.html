@@ -62,16 +62,24 @@ For example a title and description of the scene or the date &amp; time and the 
 <p>You can download the latest version of Photini from <a class="reference external" href="https://github.com/jim-easterbrook/Photini">Github</a>.
 If you have git installed on your computer, and are familiar with its use, then the best way to download it will be to clone the repository.
 This will make it easier to update your copy when new features are added or bugs are fixed.</p>
-<p>If you prefer to download a single archive file, go to the <a class="reference external" href="https://github.com/jim-easterbrook/Photini/downloads">Github download page</a> and click on &#8220;Download as zip&#8221; or &#8220;Download as tar.gz&#8221;.
+<p>If you prefer to download a single archive file, go to the <a class="reference external" href="http://pypi.python.org/pypi/Photini">Python Package Index (PyPI)</a> and download the zip or tar.gz file.
 Save the file on your computer, then extract all the files in it in the usual way.</p>
 <p>The next task is to install the various dependencies.</p>
 <div class="section" id="dependencies-linux">
 <h3>Dependencies (Linux)<a class="headerlink" href="#dependencies-linux" title="Permalink to this headline">¶</a></h3>
 <p>Many Linux installations will already have <a class="reference external" href="http://python.org/">Python</a> installed, but if not you should be able to get it easily from the standard repository.
 This should also be the case for <a class="reference external" href="http://www.riverbankcomputing.co.uk/software/pyqt/intro">PyQt</a>.
-<a class="reference external" href="http://tilloy.net/dev/pyexiv2/overview.html">pyexiv2</a> may be in the repository.
+<a class="reference external" href="http://redmine.yorba.org/projects/gexiv2/wiki">GExiv2</a> may be in the repository.
+If not, you should be able to build and install it yourself.
+See the <a class="reference external" href="http://redmine.yorba.org/projects/gexiv2/wiki">&#8220;Building and installing&#8221;</a> instructions for details.
+Only if you can&#8217;t install GExiv2 should you use <a class="reference external" href="http://tilloy.net/dev/pyexiv2/overview.html">pyexiv2</a>.
+It has some bugs which prevent Photini from saving location data correctly.
+pyexiv2 may be in the repository.
 If not, you should be able to download it from the <a class="reference external" href="http://tilloy.net/dev/pyexiv2/download.html">pyexiv2 download page</a>.
 As a last resort, you may need to compile and install it yourself, following <a class="reference external" href="http://tilloy.net/dev/pyexiv2/developers.html#building-and-installing">these instructions</a>.</p>
+<p>If you would like to use Photini to upload photos to Flickr, you will also need to install <a class="reference external" href="http://stuvel.eu/flickrapi#installation">python-flickrapi</a>.
+This is available from some Linux distributions&#8217; repositories, or via <tt class="docutils literal"><span class="pre">easy_install</span></tt>.
+See the python-flickrapi website for details.</p>
 </div>
 <div class="section" id="dependencies-windows">
 <h3>Dependencies (Windows)<a class="headerlink" href="#dependencies-windows" title="Permalink to this headline">¶</a></h3>
@@ -80,6 +88,9 @@ Installers are available from the <a class="reference external" href="http://www
 Make sure you get Python version 2.7 and the corresponding PyQt installer.
 Windows installers for <a class="reference external" href="http://tilloy.net/dev/pyexiv2/overview.html">pyexiv2</a> are available from the <a class="reference external" href="http://tilloy.net/dev/pyexiv2/download.html">pyexiv2 download page</a>.
 Again, make sure you get the installer for Python 2.7 and the latest version of pyexiv2.</p>
+<p>If you would like to use Photini to upload photos to Flickr, you will also need to install <a class="reference external" href="http://stuvel.eu/flickrapi#installation">python-flickrapi</a>.
+This appears to be a pure Python package, so <tt class="docutils literal"><span class="pre">easy_install</span></tt> is probably the best way to install it on Windows.
+See the python-flickrapi website for details.</p>
 </div>
 </div>
 <div class="section" id="installing-photini">
