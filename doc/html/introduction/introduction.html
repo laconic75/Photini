@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Introduction &mdash; Photini 13.09_r20 documentation</title>
+    <title>Introduction &mdash; Photini 13.11_r31 documentation</title>
     
     <link rel="stylesheet" href="../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '13.09_r20',
+        VERSION:     '13.11_r31',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <link rel="top" title="Photini 13.09_r20 documentation" href="../index.html" />
+    <link rel="top" title="Photini 13.11_r31 documentation" href="../index.html" />
     <link rel="next" title="Typical workflow" href="../workflow.html" />
     <link rel="prev" title="Photini documentation" href="../index.html" /> 
   </head>
@@ -42,7 +42,7 @@
         <li class="right" >
           <a href="../index.html" title="Photini documentation"
              accesskey="P">previous</a> |</li>
-        <li><a href="../index.html">Photini 13.09_r20 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Photini 13.11_r31 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -69,16 +69,19 @@ Save the file on your computer, then extract all the files in it in the usual wa
 <h3>Dependencies (Linux)<a class="headerlink" href="#dependencies-linux" title="Permalink to this headline">¶</a></h3>
 <p>Many Linux installations will already have <a class="reference external" href="http://python.org/">Python</a> installed, but if not you should be able to get it easily from the standard repository.
 This should also be the case for <a class="reference external" href="http://www.riverbankcomputing.co.uk/software/pyqt/intro">PyQt</a>.
-<a class="reference external" href="http://redmine.yorba.org/projects/gexiv2/wiki">GExiv2</a> may be in the repository.
+<a class="reference external" href="https://wiki.gnome.org/gexiv2">GExiv2</a> may be in the repository.
 If not, you should be able to build and install it yourself.
-See the <a class="reference external" href="http://redmine.yorba.org/projects/gexiv2/wiki">&#8220;Building and installing&#8221;</a> instructions for details.
+See the <a class="reference external" href="https://wiki.gnome.org/gexiv2">&#8220;Building and installing&#8221;</a> instructions for details.
 If you can&#8217;t install GExiv2 you can use <a class="reference external" href="http://tilloy.net/dev/pyexiv2/overview.html">pyexiv2</a>.
 It is no longer maintained, so GExiv2 is preferable, but pyexiv2 may be in the repository.
 If not, you should be able to download it from the <a class="reference external" href="http://tilloy.net/dev/pyexiv2/download.html">pyexiv2 download page</a>.
 As a last resort, you may need to compile and install it yourself, following <a class="reference external" href="http://tilloy.net/dev/pyexiv2/developers.html#building-and-installing">these instructions</a>.</p>
+<p>The last essential dependency is a small Python utility called <a class="reference external" href="http://pypi.python.org/pypi/appdirs/">appdirs</a>.
+The best way to install this is with <a class="reference external" href="http://pypi.python.org/pypi/pip">pip</a>, an easy to use installer for packages from PyPI.</p>
 <p>If you would like to use Photini to upload photos to Flickr, you will also need to install <a class="reference external" href="http://stuvel.eu/flickrapi#installation">python-flickrapi</a>.
-This is available from some Linux distributions&#8217; repositories, or via <tt class="docutils literal"><span class="pre">easy_install</span></tt>.
+This is available from some Linux distributions&#8217; repositories, or via <tt class="docutils literal"><span class="pre">pip</span></tt>.
 See the python-flickrapi website for details.</p>
+<p>Similarly, to upload to Google Picasa requires <a class="reference external" href="http://code.google.com/p/gdata-python-client/">gdata-python-client</a>.</p>
 </div>
 <div class="section" id="dependencies-windows">
 <h3>Dependencies (Windows)<a class="headerlink" href="#dependencies-windows" title="Permalink to this headline">¶</a></h3>
@@ -87,9 +90,12 @@ Installers are available from the <a class="reference external" href="http://www
 Make sure you get Python version 2.7 and the corresponding PyQt installer.
 Windows installers for <a class="reference external" href="http://tilloy.net/dev/pyexiv2/overview.html">pyexiv2</a> are available from the <a class="reference external" href="http://tilloy.net/dev/pyexiv2/download.html">pyexiv2 download page</a>.
 Again, make sure you get the installer for Python 2.7 and the latest version of pyexiv2.</p>
+<p>The last essential dependency is a small Python utility called <a class="reference external" href="http://pypi.python.org/pypi/appdirs/">appdirs</a>.
+The best way to install this is with <a class="reference external" href="http://pypi.python.org/pypi/pip">pip</a>, an easy to use installer for packages from PyPI.</p>
 <p>If you would like to use Photini to upload photos to Flickr, you will also need to install <a class="reference external" href="http://stuvel.eu/flickrapi#installation">python-flickrapi</a>.
-This appears to be a pure Python package, so <tt class="docutils literal"><span class="pre">easy_install</span></tt> is probably the best way to install it on Windows.
+This appears to be a pure Python package, so <tt class="docutils literal"><span class="pre">pip</span></tt> is probably the best way to install it on Windows.
 See the python-flickrapi website for details.</p>
+<p>Similarly, to upload to Google Picasa requires <a class="reference external" href="http://code.google.com/p/gdata-python-client/">gdata-python-client</a>.</p>
 </div>
 </div>
 <div class="section" id="installing-photini">
@@ -98,10 +104,10 @@ See the python-flickrapi website for details.</p>
 Open a terminal command window and navigate to the directory you downloaded it to, then navigate to the <tt class="docutils literal"><span class="pre">code</span></tt> subdirectory.
 You should then be able to run the Photini editor with one of the following commands.</p>
 <p>Linux:</p>
-<div class="highlight-python"><pre>python photini/editor.py</pre>
+<div class="highlight-python"><pre>python -m photini.editor</pre>
 </div>
 <p>Windows:</p>
-<div class="highlight-python"><pre>c:\python27\python.exe photini\editor.py</pre>
+<div class="highlight-python"><pre>c:\python27\python.exe -m photini.editor</pre>
 </div>
 <p>This should launch the GUI and you should then be able to switch to the &#8220;map&#8221; tab and load a Google map.</p>
 <p>Whilst it is perfectly possible to use Photini from its download directory, it is more convenient to install it in your Python&#8217;s &#8220;site-packages&#8221; and &#8220;scripts&#8221; directories.
@@ -178,7 +184,7 @@ Windows users can also put a link to <tt class="docutils literal"><span class="p
         <li class="right" >
           <a href="../index.html" title="Photini documentation"
              >previous</a> |</li>
-        <li><a href="../index.html">Photini 13.09_r20 documentation</a> &raquo;</li> 
+        <li><a href="../index.html">Photini 13.11_r31 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
