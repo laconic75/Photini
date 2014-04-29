@@ -23,10 +23,10 @@ Dependencies (Linux)
 
 Many Linux installations will already have `Python <http://python.org/>`_ installed, but if not you should be able to get it easily from the standard repository.
 This should also be the case for `PyQt <http://www.riverbankcomputing.co.uk/software/pyqt/intro>`_.
-`GExiv2 <https://wiki.gnome.org/action/show/Projects/gexiv2>`_ may be in the repository.
-If not, you should be able to build and install it yourself.
-See the `"Building and installing" <https://wiki.gnome.org/Projects/gexiv2/BuildingAndInstalling>`_ instructions for details.
-On my OpenSUSE Linux computer I needed to install the ``libexiv2-devel``, ``gobject-introspection-devel`` and ``typelib-1_0-GExiv2`` packages before building GExiv2.
+`GExiv2 <https://wiki.gnome.org/Projects/gexiv2>`_ may be in the repository, but might have a different name.
+For example, on my OpenSUSE computer it's called ``typelib-1_0-GExiv2``.
+`PyGObject <https://wiki.gnome.org/Projects/PyGObject>`_ may also be in the repository under a different name, e.g. ``python-gobject``.
+`pgi <https://pypi.python.org/pypi/pgi/>`_ is an alternative to PyGObject.
 
 If you can't install GExiv2 you can use `pyexiv2 <http://tilloy.net/dev/pyexiv2/overview.html>`_ instead.
 It is no longer maintained, so GExiv2 is preferable, but pyexiv2 may be in the repository.
@@ -36,11 +36,11 @@ As a last resort, you may need to compile and install it yourself, following `th
 The last essential dependency is a small Python utility called `appdirs <http://pypi.python.org/pypi/appdirs/>`_.
 The best way to install this is with `pip <http://pypi.python.org/pypi/pip>`_, an easy to use installer for packages from PyPI.
 
-If you would like to use Photini to upload photos to Flickr, you will also need to install `python-flickrapi <http://stuvel.eu/flickrapi#installation>`_.
+If you would like to use Photini to upload photos to Flickr, you will also need to install `python-flickrapi <https://pypi.python.org/pypi/flickrapi/>`_.
 This is available from some Linux distributions' repositories, or via ``pip``.
-See the python-flickrapi website for details.
+See the python-flickrapi `website <http://stuvel.eu/flickrapi#installation>`_ for details.
 
-Similarly, to upload to Google Picasa requires `gdata-python-client <http://code.google.com/p/gdata-python-client/>`_.
+Similarly, to upload to Google Picasa requires `gdata-python-client <https://pypi.python.org/pypi/gdata/>`_.
 This is called ``python-gdata`` in some Linux repositories.
 
 Dependencies (Windows)
@@ -55,11 +55,12 @@ Again, make sure you get the installer for Python 2.7 and the latest version of 
 The last essential dependency is a small Python utility called `appdirs <http://pypi.python.org/pypi/appdirs/>`_.
 The best way to install this is with `pip <http://pypi.python.org/pypi/pip>`_, an easy to use installer for packages from PyPI.
 
-If you would like to use Photini to upload photos to Flickr, you will also need to install `python-flickrapi <http://stuvel.eu/flickrapi#installation>`_.
-This appears to be a pure Python package, so ``pip`` is probably the best way to install it on Windows.
+If you would like to use Photini to upload photos to Flickr, you will also need to install `python-flickrapi <https://pypi.python.org/pypi/flickrapi/>`_.
+This is a pure Python package, so ``pip`` is probably the best way to install it on Windows.
 See the python-flickrapi website for details.
 
-Similarly, to upload to Google Picasa requires `gdata-python-client <http://code.google.com/p/gdata-python-client/>`_.
+Similarly, to upload to Google Picasa requires `gdata-python-client <https://pypi.python.org/pypi/gdata/>`_.
+This can also be installed with ``pip``.
 
 Installing Photini
 ------------------
